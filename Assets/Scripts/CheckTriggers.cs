@@ -1,40 +1,37 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreBoardTrigger : MonoBehaviour
+public class CheckTriggers : MonoBehaviour
 {
     public bool atEnter = false;
     public bool inside = false;
     public bool atExit = false;
-    public Text ScoreText;
-    int score = 0;
+    Score score;
 
-    void Start()
+    private void Start()
     {
-        ScoreText.text = ("Score = " + score);
+        score = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
     }
-
-    void OnTriggerExit(Collider col)
+    void OnTriggerStay(Collider col)
     {
-        if (col.CompareTag("exit"))
+        if (col.CompareTag("ring"))
         {
             if (atEnter == true && inside == true)
             {
                 atEnter = false;
                 inside = false;
-                score += 1;
-                ScoreText.text = ("Score = " + score);
+                score.ScoreIncrease(10);
             }
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("enter"))
+        if (other.CompareTag("ring"))
         {
             atEnter = true;
         }
-        if (other.CompareTag("inside"))
+        if (other.CompareTag("ring"))
         {
             inside = true;
         }
