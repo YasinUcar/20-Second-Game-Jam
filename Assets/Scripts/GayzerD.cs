@@ -10,13 +10,13 @@ public class GayzerD : MonoBehaviour
     {
         ParticleSystem = effectObje2.GetComponent<ParticleSystem>();
     }
-    private void OnTriggerStay(Collider other)   
+    private void OnTriggerStay(Collider other)
     {
         if (Input.GetKey("d"))
         {
-            other.GetComponent<Rigidbody>().AddForce(new Vector3(0 ,10,0), ForceMode.Impulse);
+            other.GetComponent<Rigidbody>().AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
             ParticleSystem.Play();
         }
     }
-    
+
 }
