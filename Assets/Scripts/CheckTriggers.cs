@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class CheckTriggers : MonoBehaviour
 {
-    public bool atEnter = false;
-    public bool inside = false;
-    public bool atExit = false;
-    Score score;
+    [SerializeField] bool atEnter = false;
+    [SerializeField] bool inside = false;
+    [SerializeField] bool atExit = false;
+     Score score;
+    
 
     private void Start()
     {
