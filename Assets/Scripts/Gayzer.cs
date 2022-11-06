@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gayzer: MonoBehaviour
+public class GayzerA : MonoBehaviour
 {
     [SerializeField] GameObject effectObjeLeft;
     [SerializeField] GameObject effectObjeRight;
