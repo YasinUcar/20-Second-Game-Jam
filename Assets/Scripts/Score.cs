@@ -8,6 +8,18 @@ public class Score : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI ScoreText;
     int score = 0;
+    public static Score Instance;
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     public int GetCurrentScore()
     {
         ScoreText.text = ("Score = " + score);
