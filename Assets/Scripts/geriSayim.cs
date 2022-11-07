@@ -9,6 +9,10 @@ public class geriSayim : MonoBehaviour
     public TextMeshProUGUI sayac;
     public GameObject gameover;
     bool zamanlayici;
+    [SerializeField] GameObject obje1;
+    [SerializeField] GameObject obje2;
+    [SerializeField] GameObject obje3;
+    [SerializeField] GameObject obje4;
     void Start()
     {
         zamanlayici = true;
@@ -26,6 +30,7 @@ public class geriSayim : MonoBehaviour
         else
         {
             zamanlayici=false;
+            
             GameOver();
             
         }
@@ -33,5 +38,9 @@ public class geriSayim : MonoBehaviour
     void GameOver()
     {
         gameover.SetActive(true);
+        obje1.SetActive(false);
+        obje2.SetActive(false);
+        obje3.SetActive(false);
+        obje4.SetActive(false);
     }
 }

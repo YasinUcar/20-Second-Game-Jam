@@ -4169,6 +4169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sayac: {fileID: 1008137264}
   gameover: {fileID: 61373131}
+  obje1: {fileID: 375672897}
+  obje2: {fileID: 16602146}
+  obje3: {fileID: 161802147}
+  obje4: {fileID: 1095087607}
 --- !u!1 &1058086703 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 394c12e6df01a154a8a6f2b0acacbee5, type: 3}
