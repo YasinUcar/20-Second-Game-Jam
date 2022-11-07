@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105889c63c92efc4dbdb24a36f63a57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uygulanacakGuc: 0
+  uygulanacakGuc: 0.002
   particles:
   - {fileID: 221547643}
   - {fileID: 891292007}
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105889c63c92efc4dbdb24a36f63a57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uygulanacakGuc: 0
+  uygulanacakGuc: 0.001
   particles:
   - {fileID: 221547643}
   - {fileID: 891292007}
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105889c63c92efc4dbdb24a36f63a57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uygulanacakGuc: 0
+  uygulanacakGuc: 0.002
   particles:
   - {fileID: 221547643}
   - {fileID: 891292007}
@@ -4533,7 +4533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105889c63c92efc4dbdb24a36f63a57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uygulanacakGuc: 0
+  uygulanacakGuc: 0.001
   particles:
   - {fileID: 221547643}
   - {fileID: 891292007}
