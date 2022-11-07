@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class geriSayim : MonoBehaviour
 {
-    float toplamZaman = 3;
+    [SerializeField] float toplamZaman = 21;
     public TextMeshProUGUI sayac;
     public GameObject gameover;
     bool zamanlayici;
@@ -21,18 +21,18 @@ public class geriSayim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (zamanlayici && toplamZaman>1)
+        if (zamanlayici && toplamZaman > 1)
         {
             toplamZaman -= Time.deltaTime;
             sayac.text = Mathf.FloorToInt(toplamZaman).ToString();
-           
+
         }
         else
         {
-            zamanlayici=false;
-            
+            zamanlayici = false;
+
             GameOver();
-            
+
         }
     }
     void GameOver()
