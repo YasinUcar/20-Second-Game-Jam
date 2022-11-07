@@ -6,7 +6,9 @@ public class Gayzer_A : MonoBehaviour
 {
 
     [SerializeField] GameObject effectObje;
+    [SerializeField] float uygulanacakGuc;
     ParticleSystem ParticleSystem;
+    [SerializeField] float ItmeAcisi;
     private void Start()
     {
         ParticleSystem = effectObje.GetComponent<ParticleSystem>();
@@ -15,7 +17,7 @@ public class Gayzer_A : MonoBehaviour
     {
         if (Input.GetKey("a"))
         {
-            other.GetComponent<Rigidbody>().AddForce(new Vector3(0, 6, 0), ForceMode.Impulse);
+            other.GetComponent<Rigidbody>().AddForce(new Vector3(0, uygulanacakGuc, 0), ForceMode.Impulse);
             ParticleSystem.Play();
         }
     }

@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gayzer_D : MonoBehaviour
+public class GayzerASag : MonoBehaviour
 {
     [SerializeField] GameObject effectObje;
     [SerializeField] float uygulanacakGuc;
-    [SerializeField] float ItmeAcisi;
-
     ParticleSystem ParticleSystem;
+    [SerializeField] float ItmeAcisi;
     private void Start()
     {
         ParticleSystem = effectObje.GetComponent<ParticleSystem>();
     }
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey("d"))
+        if (Input.GetKey("w"))
         {
-            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(ItmeAcisi, 90, 0)* uygulanacakGuc, ForceMode.Force);
+            other.GetComponent<Rigidbody>().AddForce(new Vector3(0, uygulanacakGuc, 0), ForceMode.Impulse);
             ParticleSystem.Play();
         }
     }
