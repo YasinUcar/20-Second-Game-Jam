@@ -9,7 +9,7 @@ public class GayzerController : MonoBehaviour
     [SerializeField] GameObject[] particles;
     [SerializeField] ParticleSystem[] particleSystems;
 
-    float ItmeAcisiE = 120, ItmeAcisiD = 60, ItmeAcısıDefault = 0;
+    float ItmeAcisiE = 120, ItmeAcisiW = 60, ItmeAcısıDefault = 0;
     private void Start()
     {
         for (int i = 0; i < particles.Length; i++)
@@ -23,28 +23,28 @@ public class GayzerController : MonoBehaviour
         {
             particles[0].GetComponent<ParticleSystem>().Play();
             if (other.CompareTag("ring"))
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(0, uygulanacakGuc, 0), ForceMode.Impulse);
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(0, 90, 0)* uygulanacakGuc, ForceMode.Impulse);
 
         }
         if (Input.GetKey("d"))
         {
             particles[1].GetComponent<ParticleSystem>().Play();
             if (other.CompareTag("ring"))
-                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(ItmeAcisiD, 90, 0) * uygulanacakGuc, ForceMode.Force);
+                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 90, 0) * uygulanacakGuc, ForceMode.Impulse);
 
         }
         if (Input.GetKey("e"))
         {
             particles[2].GetComponent<ParticleSystem>().Play();
             if (other.CompareTag("ring"))
-                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(ItmeAcisiE, 90, 0) * uygulanacakGuc, ForceMode.Force);
+                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, ItmeAcisiE, 0) * uygulanacakGuc, ForceMode.Impulse);
 
         }
         if (Input.GetKey("w"))
         {
             particles[3].GetComponent<ParticleSystem>().Play();
             if (other.CompareTag("ring"))
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(0, uygulanacakGuc, 0), ForceMode.Impulse);
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(0, ItmeAcisiW, 0)* uygulanacakGuc, ForceMode.Impulse);
 
         }
     }

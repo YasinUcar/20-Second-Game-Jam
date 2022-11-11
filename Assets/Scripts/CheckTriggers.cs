@@ -36,5 +36,10 @@ public class CheckTriggers : MonoBehaviour
         {
             inside = true;
         }
+        if (other.CompareTag("ring"))
+        {
+            
+        }
+
     }
 }
